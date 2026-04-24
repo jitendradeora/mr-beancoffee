@@ -10,7 +10,7 @@ export function Products() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl mb-4 text-foreground font-heading">
-            Our Premium Specialty Selection
+            Our Premium Specialty Coffee
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Discover our carefully curated collection of Ethiopian green coffee

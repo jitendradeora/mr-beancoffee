@@ -1,8 +1,18 @@
-import { ShoppingCart, Search, Menu, User, X, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router';
-import { motion, AnimatePresence } from 'motion/react';
-import logo from '../../imports/Logo_1.png';
+import {
+  ShoppingCart,
+  Search,
+  Menu,
+  User,
+  X,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router";
+import { motion, AnimatePresence } from "motion/react";
+import logo from "../../imports/Logo_1.png";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,25 +21,40 @@ export function Header() {
   const [cartCount] = useState(2);
   const location = useLocation();
 
-  const isHome = location.pathname === '/';
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [mobileMenuOpen]);
 
   const cartItems = [
-    { id: 1, name: 'Guji Natural Green Coffee Beans', price: 25.00, quantity: 1, image: '/placeholder-coffee.jpg' },
-    { id: 2, name: 'Ethiopian Yirgacheffe Beans', price: 28.00, quantity: 2, image: '/placeholder-coffee.jpg' }
+    {
+      id: 1,
+      name: "Guji Natural Green Coffee Beans",
+      price: 25.0,
+      quantity: 1,
+      image: "/placeholder-coffee.jpg",
+    },
+    {
+      id: 2,
+      name: "Ethiopian Yirgacheffe Beans",
+      price: 28.0,
+      quantity: 2,
+      image: "/placeholder-coffee.jpg",
+    },
   ];
 
-  const cartTotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const cartTotal = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -38,32 +63,81 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/">
-              <img src={logo} alt="Asegedech Adane Coffee" className="h-14 w-auto" />
+              <img
+                src={logo}
+                alt="Asegedech Adane Coffee"
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors">Home</Link>
+            <Link
+              to="/"
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Home
+            </Link>
             {isHome ? (
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">About Us</a>
+              <a
+                href="#about"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                About Us
+              </a>
             ) : (
-              <Link to="/#about" className="text-foreground hover:text-primary transition-colors">About Us</Link>
+              <Link
+                to="/#about"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                About Us
+              </Link>
             )}
             {isHome ? (
-              <a href="#products" className="text-foreground hover:text-primary transition-colors">Products</a>
+              <a
+                href="#products"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Products
+              </a>
             ) : (
-              <Link to="/products" className="text-foreground hover:text-primary transition-colors">Products</Link>
+              <Link
+                to="/products"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Products
+              </Link>
             )}
             {isHome ? (
-              <a href="#coffee" className="text-foreground hover:text-primary transition-colors">Our Coffee</a>
+              <a
+                href="#coffee"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Our Coffee
+              </a>
             ) : (
-              <Link to="/#coffee" className="text-foreground hover:text-primary transition-colors">Our Coffee</Link>
+              <Link
+                to="/#coffee"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Our Coffee
+              </Link>
             )}
             {isHome ? (
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+              <a
+                href="#contact"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Contact
+              </a>
             ) : (
-              <Link to="/#contact" className="text-foreground hover:text-primary transition-colors">Contact</Link>
+              <Link
+                to="/#contact"
+                className="text-foreground hover:text-primary transition-colors"
+              >
+                Contact
+              </Link>
             )}
           </nav>
 
@@ -98,7 +172,10 @@ export function Header() {
               )}
             </AnimatePresence>
 
-            <Link to="/login" className="text-foreground hover:text-primary transition-colors">
+            <Link
+              to="/login"
+              className="text-foreground hover:text-primary transition-colors"
+            >
               <User className="w-5 h-5" />
             </Link>
 
@@ -125,16 +202,27 @@ export function Header() {
                     className="absolute top-12 right-0 w-96 bg-white shadow-xl rounded-lg border border-gray-200 overflow-hidden"
                   >
                     <div className="p-4 border-b border-gray-200">
-                      <h3 className="font-heading text-lg">Shopping Cart ({cartCount})</h3>
+                      <h3 className="font-heading text-lg">
+                        Shopping Cart ({cartCount})
+                      </h3>
                     </div>
                     <div className="max-h-96 overflow-y-auto">
                       {cartItems.map((item) => (
-                        <div key={item.id} className="p-4 border-b border-gray-100 flex gap-4">
+                        <div
+                          key={item.id}
+                          className="p-4 border-b border-gray-100 flex gap-4"
+                        >
                           <div className="w-16 h-16 bg-gray-100 rounded flex-shrink-0"></div>
                           <div className="flex-1">
-                            <h4 className="text-sm font-medium mb-1">{item.name}</h4>
-                            <p className="text-xs text-muted-foreground mb-2">Qty: {item.quantity}</p>
-                            <p className="text-primary font-medium">${item.price.toFixed(2)}</p>
+                            <h4 className="text-sm font-medium mb-1">
+                              {item.name}
+                            </h4>
+                            <p className="text-xs text-muted-foreground mb-2">
+                              Qty: {item.quantity}
+                            </p>
+                            <p className="text-primary font-medium">
+                              ${item.price.toFixed(2)}
+                            </p>
                           </div>
                         </div>
                       ))}
@@ -142,7 +230,9 @@ export function Header() {
                     <div className="p-4 bg-gray-50">
                       <div className="flex justify-between mb-4">
                         <span className="font-medium">Total:</span>
-                        <span className="text-primary font-heading text-lg">${cartTotal.toFixed(2)}</span>
+                        <span className="text-primary font-heading text-lg">
+                          ${cartTotal.toFixed(2)}
+                        </span>
                       </div>
                       <Link
                         to="/checkout"
@@ -186,16 +276,20 @@ export function Header() {
               className="fixed inset-0 bg-black/50 z-40 md:hidden"
             />
             <motion.div
-              initial={{ x: '100%' }}
+              initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.3 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
               className="fixed top-0 right-0 bottom-0 w-80 bg-white z-50 md:hidden shadow-2xl overflow-y-auto"
             >
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between p-6 border-b border-border">
                 <Link to="/" onClick={() => setMobileMenuOpen(false)}>
-                  <img src={logo} alt="Asegedech Adane Coffee" className="h-12 w-auto" />
+                  <img
+                    src={logo}
+                    alt="Asegedech Adane Coffee"
+                    className="h-12 w-auto"
+                  />
                 </Link>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
@@ -287,7 +381,10 @@ export function Header() {
                   <button className="text-foreground hover:text-primary transition-colors">
                     <Search className="w-6 h-6" />
                   </button>
-                  <Link to="/login" className="text-foreground hover:text-primary transition-colors">
+                  <Link
+                    to="/login"
+                    className="text-foreground hover:text-primary transition-colors"
+                  >
                     <User className="w-6 h-6" />
                   </Link>
                   <button className="relative text-foreground hover:text-primary transition-colors">
