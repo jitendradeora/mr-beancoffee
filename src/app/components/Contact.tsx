@@ -1,13 +1,16 @@
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Send } from "lucide-react";
 
 export function Contact() {
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl mb-4 text-foreground font-heading">Get in Touch</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 text-foreground font-heading">
+            Get in Touch
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Have questions about our coffee or want to place an order? We're here to help.
+            Have questions about our coffee or want to place an order? We're
+            here to help.
           </p>
         </div>
 
@@ -19,9 +22,14 @@ export function Contact() {
                 <Phone className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl mb-2 text-foreground font-heading">Phone</h3>
-                <a href="tel:+251979206192" className="text-muted-foreground hover:text-primary transition-colors text-lg">
-                  +251 979 206 192
+                <h3 className="text-xl mb-2 text-foreground font-heading">
+                  Phone
+                </h3>
+                <a
+                  href="tel:+447831576686"
+                  className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                >
+                  +44 (0)783-157-6686
                 </a>
               </div>
             </div>
@@ -31,12 +39,14 @@ export function Contact() {
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl mb-2 text-foreground font-heading">Email</h3>
-                <a 
-                  href="mailto:asegedechadanecoffees@gmail.com" 
+                <h3 className="text-xl mb-2 text-foreground font-heading">
+                  Email
+                </h3>
+                <a
+                  href="mailto:info@mr-bean.coffee"
                   className="text-muted-foreground hover:text-primary transition-colors text-lg break-all"
                 >
-                  asegedechadanecoffees@gmail.com
+                  info@mr-bean.coffee
                 </a>
               </div>
             </div>
@@ -46,9 +56,12 @@ export function Contact() {
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-xl mb-2 text-foreground font-heading">Location</h3>
+                <h3 className="text-xl mb-2 text-foreground font-heading">
+                  Location
+                </h3>
                 <p className="text-muted-foreground text-lg">
-                  Guji, Ethiopia
+                  Mr. Bean Coffee Ltd. 275 New North Road, Islington, Suite 5236
+                  London N1 7AA, U.K.
                 </p>
               </div>
             </div>
@@ -58,7 +71,10 @@ export function Contact() {
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm mb-2 text-foreground">
+                <label
+                  htmlFor="name"
+                  className="block text-sm mb-2 text-foreground"
+                >
                   Your Name
                 </label>
                 <input
@@ -70,7 +86,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm mb-2 text-foreground">
+                <label
+                  htmlFor="email"
+                  className="block text-sm mb-2 text-foreground"
+                >
                   Email Address
                 </label>
                 <input
@@ -82,7 +101,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="mobile" className="block text-sm mb-2 text-foreground">
+                <label
+                  htmlFor="mobile"
+                  className="block text-sm mb-2 text-foreground"
+                >
                   Mobile Number
                 </label>
                 <input
@@ -94,7 +116,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm mb-2 text-foreground">
+                <label
+                  htmlFor="message"
+                  className="block text-sm mb-2 text-foreground"
+                >
                   Message
                 </label>
                 <textarea
