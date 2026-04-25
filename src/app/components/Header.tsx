@@ -40,14 +40,14 @@ export function Header() {
       name: "Guji Natural Green Coffee Beans",
       price: 25.0,
       quantity: 1,
-      image: "/placeholder-coffee.jpg",
+      image: "/src/imports/asegedech-adane-coffee_2.jpg",
     },
     {
       id: 2,
       name: "Ethiopian Yirgacheffe Beans",
       price: 28.0,
       quantity: 2,
-      image: "/placeholder-coffee.jpg",
+      image: "/src/imports/asegedech-adane-coffee_3.jpg",
     },
   ];
 
@@ -205,6 +205,13 @@ export function Header() {
                       <h3 className="font-heading text-lg">
                         Shopping Cart ({cartCount})
                       </h3>
+                      <Link
+                        to="#"
+                        className="text-muted-foreground text-sm flex items-center gap-2 hover:text-primary transition-colors absolute top-4 right-4"
+                        onClick={() => setCartOpen(false)}
+                      >
+                        <X className="w-5 h-5" />
+                      </Link>
                     </div>
                     <div className="max-h-96 overflow-y-auto">
                       {cartItems.map((item) => (
@@ -212,7 +219,13 @@ export function Header() {
                           key={item.id}
                           className="p-4 border-b border-gray-100 flex gap-4"
                         >
-                          <div className="w-16 h-16 bg-gray-100 rounded flex-shrink-0"></div>
+                          <div className="w-16 h-16 bg-gray-100 rounded flex-shrink-0">
+                            <img
+                              src={item.image}
+                              alt={item.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
                           <div className="flex-1">
                             <h4 className="text-sm font-medium mb-1">
                               {item.name}

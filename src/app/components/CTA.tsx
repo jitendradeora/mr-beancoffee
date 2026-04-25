@@ -1,5 +1,5 @@
-import { ArrowRight, Mail } from 'lucide-react';
-import ctaImage from '../../imports/asegedech-adane-coffee_9.jpg';
+import { ArrowRight, Mail } from "lucide-react";
+import ctaImage from "../../imports/asegedech-adane-coffee_9.jpg";
 
 export function CTA() {
   return (
@@ -18,19 +18,11 @@ export function CTA() {
           Ready to Experience Ethiopian Excellence?
         </h2>
         <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Partner with us for premium green coffee beans that will elevate your roasting business.
-          Contact us today for samples and pricing.
+          Partner with us for premium green coffee beans that will elevate your
+          roasting business. Contact us today for samples and pricing.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all transform hover:scale-105 gap-2 group"
-          >
-            <Mail className="w-5 h-5" />
-            <span>Request Samples</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
           <a
             href="#products"
             className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-lg hover:bg-white/20 transition-all"

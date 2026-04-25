@@ -35,7 +35,7 @@ export const products: Product[] = [
     images: [product1, product2, product3],
     description: 'Fruity and floral notes with bright acidity.',
     price: '25.00',
-    origin: 'Mr. Bean Coffee Ltd. 275 New North Road, Islington, Suite 5236 London N1 7AA, U.K.',
+    origin: 'Guji, Ethiopia',
     category: 'Single Origin',
     altitude: '1,950 - 2,200 MASL',
     process: 'Natural (Dry)',

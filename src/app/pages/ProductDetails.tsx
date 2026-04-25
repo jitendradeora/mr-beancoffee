@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent, type ChangeEvent } from "react";
 import { useParams, Link, useNavigate } from "react-router";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -20,6 +20,7 @@ import {
   Twitter,
   Linkedin,
   Instagram,
+  ChevronDown,
   X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
@@ -34,6 +35,13 @@ export function ProductDetails() {
   const [bagSize, setBagSize] = useState("1KG");
   const [isFavorite, setIsFavorite] = useState(false);
   const [shareOpen, setShareOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
 
   if (!product) {
     return (
@@ -71,6 +79,19 @@ export function ProductDetails() {
     setCurrentImageIndex((prev) =>
       prev === 0 ? product.images.length - 1 : prev - 1,
     );
+  };
+
+  const handleFormChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormOpen(false);
+    setFormData({ name: "", email: "", mobile: "", message: "" });
   };
 
   return (
@@ -290,25 +311,28 @@ export function ProductDetails() {
             <div className="mb-8 space-y-6">
               <div>
                 <label className="block text-sm mb-3">Bag Size</label>
-                <select
-                  value={bagSize}
-                  onChange={(e) => setBagSize(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white"
-                >
-                  <option value="250GM">250GM</option>
-                  <option value="500GM">500GM</option>
-                  <option value="1KG">1KG</option>
-                  <option value="5KG">5KG</option>
-                  <option value="10KG">10KG</option>
-                  <option value="25KG">25KG</option>
-                  <option value="60KG">60KG</option>
-                </select>
+                <div className="relative">
+                  <select
+                    value={bagSize}
+                    onChange={(e) => setBagSize(e.target.value)}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white appearance-none"
+                  >
+                    <option value="250GM">250GM</option>
+                    <option value="500GM">500GM</option>
+                    <option value="1KG">1KG</option>
+                    <option value="5KG">5KG</option>
+                    <option value="10KG">10KG</option>
+                    <option value="25KG">25KG</option>
+                    <option value="60KG">60KG</option>
+                  </select>
+                  <ChevronDown className="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                </div>
               </div>
 
               <div>
                 <label className="block text-sm mb-3">Number of Bags</label>
                 <div className="flex items-center gap-4">
-                  <div className="flex items-center border-2 border-gray-200 rounded-lg">
+                  <div className="flex items-center border-2 border-gray-200 rounded-lg bg-white">
                     <button
                       onClick={() =>
                         setNumberOfBags(Math.max(1, numberOfBags - 1))
@@ -352,12 +376,13 @@ export function ProductDetails() {
                 <ShoppingCart className="w-5 h-5" />
                 <span>Add to Cart</span>
               </button>
-              <Link
-                to="/#contact"
+
+              <button
+                onClick={() => setFormOpen(true)}
                 className="px-8 py-4 border-2 border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-all flex items-center justify-center"
               >
                 Request Product Profile
-              </Link>
+              </button>
             </div>
 
             {/* Cup Profile */}
@@ -471,6 +496,133 @@ export function ProductDetails() {
           </div>
         )}
       </div>
+
+      <AnimatePresence>
+        {formOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setFormOpen(false)}
+              className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
+            >
+              <div className="bg-white rounded-xl shadow-2xl w-full max-w-md pointer-events-auto max-h-[90vh] overflow-y-auto">
+                <div className="p-4 border-b border-gray-200 flex items-center justify-between sticky top-0 bg-white z-10">
+                  <h3 className="text-xl font-heading">
+                    Request Product Profile
+                  </h3>
+                  <button
+                    onClick={() => setFormOpen(false)}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+                <div className="p-6">
+                  <form onSubmit={handleFormSubmit} className="space-y-5">
+                    <div>
+                      <label
+                        htmlFor="form-name"
+                        className="block text-sm mb-2 text-foreground"
+                      >
+                        Your Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="form-name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleFormChange}
+                        className="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="John Doe"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="form-email"
+                        className="block text-sm mb-2 text-foreground"
+                      >
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="form-email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleFormChange}
+                        className="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="john@example.com"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="form-mobile"
+                        className="block text-sm mb-2 text-foreground"
+                      >
+                        Mobile Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="form-mobile"
+                        name="mobile"
+                        value={formData.mobile}
+                        onChange={handleFormChange}
+                        className="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                        placeholder="+1 (555) 000-0000"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        htmlFor="form-message"
+                        className="block text-sm mb-2 text-foreground"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        id="form-message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleFormChange}
+                        rows={4}
+                        className="w-full px-4 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                        placeholder="Any specific requirements or questions..."
+                      ></textarea>
+                    </div>
+
+                    <div className="flex gap-3 pt-2">
+                      <button
+                        type="button"
+                        onClick={() => setFormOpen(false)}
+                        className="flex-1 px-6 py-2 border-2 border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        type="submit"
+                        className="flex-1 bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-all font-medium"
+                      >
+                        Submit Request
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       <Footer />
     </div>

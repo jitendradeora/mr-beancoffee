@@ -5,9 +5,14 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  ChevronUp,
 } from "lucide-react";
 import { Link } from "react-router";
 import logo from "../../imports/Logo_1.png";
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
 export function Footer() {
   return (
@@ -164,7 +169,16 @@ export function Footer() {
             <p className="text-gray-400 text-sm text-center md:text-left">
               © 2026 Asegedech Adane Coffee. All Rights Reserved.
             </p>
-            <div className="flex gap-6 text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
+              <button
+                type="button"
+                onClick={scrollToTop}
+                className="inline-flex items-center gap-1.5 text-gray-400 hover:text-primary transition-colors"
+                aria-label="Move to top"
+              >
+                <ChevronUp className="w-4 h-4" aria-hidden />
+                Move to top
+              </button>
               <a
                 href="#"
                 className="text-gray-400 hover:text-primary transition-colors"
