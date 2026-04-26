@@ -8,7 +8,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { Link } from "react-router";
-import logo from "../../imports/Logo_1.png";
+import logo from "../../imports/footer-logo.png";
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -16,36 +16,33 @@ function scrollToTop() {
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-white">
+    <footer className="bg-theme-light-gray text-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <img
-              src={logo}
-              alt="Asegedech Adane Coffee"
-              className="h-12 w-auto mb-6 brightness-0 invert"
-            />
-            <p className="text-gray-300 text-sm leading-relaxed mb-4">
+            <h2 className="text-2xl font-bold mb-4">Mr. Bean Coffee</h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               Premium Ethiopian green coffee beans, ethically sourced from the
-              highlands of Guji.
+              highlands of Guji. We are a team of coffee enthusiasts who are
+              passionate about coffee.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -54,12 +51,12 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-6 text-white font-heading">Quick Links</h4>
+            <h4 className="mb-6 text-foreground font-heading">Quick Links</h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/"
-                  className="text-gray-300 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Home
                 </Link>
@@ -67,7 +64,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/products"
-                  className="text-gray-300 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Products
                 </Link>
@@ -75,7 +72,7 @@ export function Footer() {
               <li>
                 <a
                   href="/#about"
-                  className="text-gray-300 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   About Us
                 </a>
@@ -83,7 +80,7 @@ export function Footer() {
               <li>
                 <a
                   href="/#contact"
-                  className="text-gray-300 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Contact
                 </a>
@@ -93,12 +90,12 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="mb-6 text-white font-heading">Our Products</h4>
+            <h4 className="mb-6 text-foreground font-heading">Our Products</h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/products"
-                  className="text-gray-300 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Single Origin
                 </Link>
@@ -106,7 +103,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/products"
-                  className="text-gray-300 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Bulk Orders
                 </Link>
@@ -114,7 +111,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/products"
-                  className="text-gray-300 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Specialty Beans
                 </Link>
@@ -122,7 +119,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/products"
-                  className="text-gray-300 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Organic Coffee
                 </Link>
@@ -132,11 +129,11 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="mb-6 text-white font-heading">Get In Touch</h4>
+            <h4 className="mb-6 text-foreground font-heading">Get In Touch</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">
+                <span className="text-muted-foreground text-sm">
                   Mr. Bean Coffee Ltd. 275 New North Road, Islington, Suite 5236
                   London N1 7AA, U.K.
                 </span>
@@ -145,7 +142,7 @@ export function Footer() {
                 <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <a
                   href="tel:+447831576686"
-                  className="text-gray-300 text-sm hover:text-primary transition-colors"
+                  className="text-muted-foreground text-sm hover:text-primary transition-colors"
                 >
                   +44 (0)783-157-6686
                 </a>
@@ -154,7 +151,7 @@ export function Footer() {
                 <Mail className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <a
                   href="mailto:info@mr-bean.coffee"
-                  className="text-gray-300 text-sm hover:text-primary transition-colors break-all"
+                  className="text-muted-foreground text-sm hover:text-primary transition-colors break-all"
                 >
                   info@mr-bean.coffee
                 </a>
@@ -162,35 +159,39 @@ export function Footer() {
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm text-center md:text-left">
-              © 2026 Asegedech Adane Coffee. All Rights Reserved.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-              <button
-                type="button"
-                onClick={scrollToTop}
-                className="inline-flex items-center gap-1.5 text-gray-400 hover:text-primary transition-colors"
-                aria-label="Move to top"
-              >
-                <ChevronUp className="w-4 h-4" aria-hidden />
-                Move to top
-              </button>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-primary transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-primary transition-colors"
-              >
-                Terms
-              </a>
+      {/* Bottom Bar */}
+      <div className="bg-white text-foreground border-t border-border">
+        <div className="max-w-7xl mx-auto py-4">
+          <div className="border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-muted-foreground text-sm text-center md:text-left">
+                © 2026 Mr. Bean Coffee. All Rights Reserved.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
+                <button
+                  type="button"
+                  onClick={scrollToTop}
+                  className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Move to top"
+                >
+                  <ChevronUp className="w-4 h-4" aria-hidden />
+                  Move to top
+                </button>
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Privacy Policy
+                </a>
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Terms
+                </a>
+              </div>
             </div>
           </div>
         </div>

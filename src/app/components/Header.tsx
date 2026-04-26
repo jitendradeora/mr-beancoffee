@@ -58,21 +58,22 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center bg-red-500">
             <Link to="/">
               <img
                 src={logo}
-                alt="Asegedech Adane Coffee"
-                className="h-10 w-auto"
+                alt="Mr. Bean Coffee"
+                className="absolute top-0 left-0 object-cover"
+                style={{ height: "100%", width: "auto" }}
               />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center  ml-20 space-x-8">
             <Link
               to="/"
               className="text-foreground hover:text-primary transition-colors"
@@ -300,7 +301,7 @@ export function Header() {
                 <Link to="/" onClick={() => setMobileMenuOpen(false)}>
                   <img
                     src={logo}
-                    alt="Asegedech Adane Coffee"
+                    alt="Asegedec h Adane Coffee"
                     className="h-12 w-auto"
                   />
                 </Link>

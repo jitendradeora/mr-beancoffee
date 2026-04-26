@@ -2,31 +2,31 @@
 
 :root {
   --font-size: 16px;
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Lato', sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Lato", sans-serif;
   --background: #e6eceb;
-  --foreground: #2c3e2e;
+  --foreground: #000000;
   --card: #ffffff;
-  --card-foreground: #2c3e2e;
+  --card-foreground: #592a1d;
   --popover: #ffffff;
-  --popover-foreground: #2c3e2e;
-  --primary: #a7ce87;
-  --primary-foreground: #2c3e2e;
+  --popover-foreground: #592a1d;
+  --primary: #592a1d;
+  --primary-foreground: #ffffff;
   --secondary: #e6eceb;
-  --secondary-foreground: #2c3e2e;
+  --secondary-foreground: #2c2c2c;
   --muted: #f5f8f7;
-  --muted-foreground: #6b7c6b;
-  --accent: #a7ce87;
-  --accent-foreground: #2c3e2e;
+  --muted-foreground: #515151;
+  --accent: #592a1d;
+  --accent-foreground: #ffffff;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
-  --border: rgba(167, 206, 135, 0.2);
+  --border: rgba(89, 42, 29, 0.2);
   --input: transparent;
   --input-background: #ffffff;
   --switch-background: #cbced4;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #a7ce87;
+  --ring: #592a1d;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -35,12 +35,14 @@
   --radius: 0.5rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #a7ce87;
-  --sidebar-primary-foreground: #2c3e2e;
+  --sidebar-primary: #592a1d;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --theme-bg-new: linear-gradient(180deg, #fcdabd 0%, #cbdef4 100%);
+  --theme-bg-light-gray: #f2f2f2;
 }
 
 .dark {
@@ -185,4 +187,11 @@
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
   }
+}
+
+.custom-bg {
+  background: var(--theme-bg-new);
+}
+.bg-theme-light-gray {
+  background: var(--theme-bg-theme-light-gray);
 }

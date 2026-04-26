@@ -392,7 +392,7 @@ export function ProductDetails() {
         {/* Product Specifications */}
         <div className="border-t border-gray-200 pt-8">
           <h3 className="text-xl mb-6 font-heading">Product Details</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primary mt-1" />
               <div>
@@ -432,7 +432,7 @@ export function ProductDetails() {
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-200 pt-8 mt-8 mb-8">
+        <div className="border-t border-gray-200 pt-8 mt-0 mb-8">
           <h3 className="text-xl mb-4 font-heading">Cup Profile</h3>
           <div className="flex flex-wrap gap-2">
             {product.cupProfile.map((note, index) => (
@@ -447,7 +447,7 @@ export function ProductDetails() {
         </div>
 
         {/* Full Description */}
-        <div className="max-w-4xl mb-20">
+        <div className="mb-20">
           <h2 className="text-2xl md:text-3xl mb-6 font-heading">
             About This Coffee
           </h2>

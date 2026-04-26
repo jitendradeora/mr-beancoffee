@@ -6,7 +6,7 @@ const products = getFeaturedProducts();
 
 export function Products() {
   return (
-    <section id="products" className="py-20 bg-background">
+    <section id="products" className="py-20 custom-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl mb-4 text-foreground font-heading">

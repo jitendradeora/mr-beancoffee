@@ -1,32 +1,37 @@
-import { Star } from 'lucide-react';
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: 'Sarah Mitchell',
-    role: 'Coffee Roaster, Portland',
-    content: 'The Guji beans from Asegedech Adane have exceptional clarity and complexity. Our customers consistently rate them as favorites.',
-    rating: 5
+    name: "Sarah Mitchell",
+    role: "Coffee Roaster, Portland",
+    content:
+      "The Guji beans from Asegedech Adane have exceptional clarity and complexity. Our customers consistently rate them as favorites.",
+    rating: 5,
   },
   {
-    name: 'Marco Rossi',
-    role: 'Specialty Coffee Importer, Italy',
-    content: 'Outstanding quality and reliability. The natural process beans have incredible fruit notes that make for an unforgettable cup.',
-    rating: 5
+    name: "Marco Rossi",
+    role: "Specialty Coffee Importer, Italy",
+    content:
+      "Outstanding quality and reliability. The natural process beans have incredible fruit notes that make for an unforgettable cup.",
+    rating: 5,
   },
   {
-    name: 'Jennifer Wong',
-    role: 'Café Owner, Singapore',
-    content: 'We have been sourcing from Asegedech Adane for two years. The consistency and ethical practices make them our trusted partner.',
-    rating: 5
-  }
+    name: "Jennifer Wong",
+    role: "Café Owner, Singapore",
+    content:
+      "We have been sourcing from Asegedech Adane for two years. The consistency and ethical practices make them our trusted partner.",
+    rating: 5,
+  },
 ];
 
 export function Testimonials() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 custom-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl mb-4 text-foreground font-heading">What Our Partners Say</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 text-foreground font-heading">
+            What Our Partners Say
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Trusted by specialty coffee roasters and importers worldwide
           </p>
@@ -34,7 +39,10 @@ export function Testimonials() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+            <div
+              key={index}
+              className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow"
+            >
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-primary text-primary" />
@@ -45,7 +53,9 @@ export function Testimonials() {
               </p>
               <div>
                 <p className="text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                <p className="text-sm text-muted-foreground">
+                  {testimonial.role}
+                </p>
               </div>
             </div>
           ))}
@@ -60,12 +70,16 @@ export function Testimonials() {
           <div className="w-px h-12 bg-border hidden sm:block"></div>
           <div className="flex flex-col items-center">
             <div className="text-3xl text-primary mb-2 font-heading">20+</div>
-            <div className="text-sm text-muted-foreground">Years Experience</div>
+            <div className="text-sm text-muted-foreground">
+              Years Experience
+            </div>
           </div>
           <div className="w-px h-12 bg-border hidden sm:block"></div>
           <div className="flex flex-col items-center">
             <div className="text-3xl text-primary mb-2 font-heading">50+</div>
-            <div className="text-sm text-muted-foreground">Countries Served</div>
+            <div className="text-sm text-muted-foreground">
+              Countries Served
+            </div>
           </div>
           <div className="w-px h-12 bg-border hidden sm:block"></div>
           <div className="flex flex-col items-center">
