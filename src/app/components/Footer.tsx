@@ -23,7 +23,7 @@ export function Footer() {
           <div>
             <h2 className="text-2xl font-bold mb-4">Mr. Bean Coffee</h2>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Premium Ethiopian green coffee beans, ethically sourced from the
+              Premium specialty green coffee beans, ethically sourced from the
               highlands of Guji. We are a team of coffee enthusiasts who are
               passionate about coffee.
             </p>

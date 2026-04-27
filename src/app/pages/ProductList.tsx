@@ -1,15 +1,20 @@
-import { useState } from 'react';
-import { Link } from 'react-router';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { ProductCard } from '../components/ProductCard';
-import { products, getProductsByCategory } from '../data/products';
-import { Filter, SlidersHorizontal } from 'lucide-react';
+import { useState } from "react";
+import { Link } from "react-router";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { ProductCard } from "../components/ProductCard";
+import { products, getProductsByCategory } from "../data/products";
+import { Filter, SlidersHorizontal } from "lucide-react";
 
-const categories = ['All Beans', 'Single Origin', 'Bulk Orders', 'Specialty Beans'];
+const categories = [
+  "All Beans",
+  "Single Origin",
+  "Bulk Orders",
+  "Specialty Beans",
+];
 
 export function ProductList() {
-  const [selectedCategory, setSelectedCategory] = useState('All Beans');
+  const [selectedCategory, setSelectedCategory] = useState("All Beans");
   const [filteredProducts, setFilteredProducts] = useState(products);
 
   const handleCategoryChange = (category: string) => {
@@ -20,12 +25,15 @@ export function ProductList() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Breadcrumb */}
       <div className="bg-primary/5 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-sm">
-            <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link
+              to="/"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               Home
             </Link>
             <span className="text-muted-foreground">/</span>
@@ -35,7 +43,7 @@ export function ProductList() {
             Our Coffee Collection
           </h1>
           <p className="mt-2 text-muted-foreground max-w-2xl">
-            Explore our full range of premium Ethiopian green coffee beans, 
+            Explore our full range of premium specialty green coffee beans,
             sourced directly from our family farms in the highlands.
           </p>
         </div>
@@ -52,8 +60,8 @@ export function ProductList() {
                 onClick={() => handleCategoryChange(category)}
                 className={`px-6 py-2 rounded-full transition-all ${
                   selectedCategory === category
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-white text-foreground hover:bg-primary hover:text-primary-foreground'
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-white text-foreground hover:bg-primary hover:text-primary-foreground"
                 }`}
               >
                 {category}
@@ -71,7 +79,8 @@ export function ProductList() {
         {/* Results Count */}
         <div className="mb-6">
           <p className="text-muted-foreground">
-            Showing {filteredProducts.length} {filteredProducts.length === 1 ? 'product' : 'products'}
+            Showing {filteredProducts.length}{" "}
+            {filteredProducts.length === 1 ? "product" : "products"}
           </p>
         </div>
 
@@ -91,7 +100,7 @@ export function ProductList() {
               Try adjusting your filters or browse all products
             </p>
             <button
-              onClick={() => handleCategoryChange('All Beans')}
+              onClick={() => handleCategoryChange("All Beans")}
               className="mt-6 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
             >
               View All Products

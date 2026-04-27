@@ -18,8 +18,9 @@ export function CTA() {
           Ready to Experience Ethiopian Excellence?
         </h2>
         <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Partner with us for premium green coffee beans that will elevate your
-          roasting business. Contact us today for samples and pricing.
+          Partner with us for premium specialty green coffee beans that will
+          elevate your roasting business. Contact us today for samples and
+          pricing.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
