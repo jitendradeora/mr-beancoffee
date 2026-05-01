@@ -50,40 +50,6 @@ export function ProductList() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Filters Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
-          {/* Categories */}
-          <div className="flex flex-wrap gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => handleCategoryChange(category)}
-                className={`px-6 py-2 rounded-full transition-all ${
-                  selectedCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-white text-foreground hover:bg-primary hover:text-primary-foreground"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          {/* Filter Button */}
-          <button className="flex items-center gap-2 px-6 py-2 border border-gray-300 rounded-lg hover:border-primary transition-colors">
-            <SlidersHorizontal className="w-4 h-4" />
-            <span>Filters</span>
-          </button>
-        </div>
-
-        {/* Results Count */}
-        <div className="mb-6">
-          <p className="text-muted-foreground">
-            Showing {filteredProducts.length}{" "}
-            {filteredProducts.length === 1 ? "product" : "products"}
-          </p>
-        </div>
-
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
           {filteredProducts.map((product) => (

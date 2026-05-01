@@ -1,27 +1,30 @@
-import { Coffee, Package, Shield, Truck } from 'lucide-react';
-import featuresImage from '../../imports/asegedech-adane-coffee_8.jpg';
+import { Coffee, Package, Shield, Truck } from "lucide-react";
+import featuresImage from "../../imports/asegedech-adane-coffee_8.jpg";
 
 const features = [
   {
     icon: Coffee,
-    title: 'Premium Arabica',
-    description: 'Only the finest Arabica beans from high-altitude farms in the Guji region.'
+    title: "Premium Arabica",
+    description:
+      "Only the finest Arabica beans from well-known producing regions in Ethiopia",
   },
   {
     icon: Shield,
-    title: 'Quality Assured',
-    description: 'Every batch is tested and certified to meet international quality standards.'
+    title: "Quality Assured",
+    description:
+      "Every batch is tested and certified to meet international quality standards.",
   },
   {
     icon: Package,
-    title: 'Expert Processing',
-    description: 'Carefully processed using traditional and modern techniques for optimal flavor.'
+    title: "Expert Processing",
+    description:
+      "Carefully processed using traditional and modern techniques for optimal flavor.",
   },
   {
     icon: Truck,
-    title: 'Global Shipping',
-    description: 'Fast and secure delivery to roasters and importers worldwide.'
-  }
+    title: "Global Shipping",
+    description: "Fast and secure delivery to your door.",
+  },
 ];
 
 export function Features() {
@@ -31,11 +34,12 @@ export function Features() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
             <h2 className="text-3xl md:text-4xl mb-6 text-foreground font-heading">
-              Why Choose Our Coffee?
+              Why choose our coffees?
             </h2>
             <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-              From our family farm to your roastery, we ensure every step meets the highest
-              standards of quality, sustainability, and ethical farming practices.
+              Direct from family farms, we ensure every step meets the highest
+              standards of quality, sustainability, and ethical farming
+              practices.
             </p>
 
             <div className="space-y-6">

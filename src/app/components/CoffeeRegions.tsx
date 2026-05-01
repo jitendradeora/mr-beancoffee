@@ -73,8 +73,8 @@ export function CoffeeRegions() {
             Our Coffee Origins
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            We source our premium specialty green coffee from multiple regions
-            within Hambella, each contributing unique characteristics
+            We source our premium specialty green coffee beans from multiple
+            regions in Ethiopia.
           </p>
         </div>
 

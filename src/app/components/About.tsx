@@ -44,21 +44,11 @@ export function About() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <p className="text-muted-foreground mb-4 leading-relaxed text-lg">
-              Mr. Bean Coffee Producing and Exporting Company is a family-owned
-              business based in Ethiopia, specializing in the cultivation and
-              export of high-quality Guji coffee beans from our own farm and
-              affiliated farmers.
-            </p>
-            <p className="text-muted-foreground mb-4 leading-relaxed text-lg">
-              With deep roots in the renowned coffee-growing region of Hambella
-              Wamena, we produce premium, ethically sourced Arabica beans known
-              for their unique fruity and floral flavors.
-            </p>
             <p className="text-muted-foreground leading-relaxed text-lg">
               Our mission is to bring the authentic taste of Ethiopian coffee to
-              global markets while maintaining the highest standards of
-              sustainability and quality from farm to cup.
+              your home and your favorite specialty coffee cafes while
+              maintaining the highest standards of sustainability and quality
+              from farm to your roaster and cup.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -88,9 +78,9 @@ export function About() {
                   <Icon className="w-8 h-8 text-primary" />
                 </div>
                 <h4 className="mb-2 text-foreground">{feature.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                {/* <p className="text-sm text-muted-foreground leading-relaxed">
                   {feature.description}
-                </p>
+                </p> */}
               </div>
             );
           })}

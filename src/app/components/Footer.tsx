@@ -16,7 +16,7 @@ function scrollToTop() {
 
 export function Footer() {
   return (
-    <footer className="bg-theme-light-gray text-foreground">
+    <footer className="bg-theme-light-gray text-foreground bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -27,40 +27,12 @@ export function Footer() {
               highlands of Guji. We are a team of coffee enthusiasts who are
               passionate about coffee.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="mb-6 text-foreground font-heading">Quick Links</h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
               <li>
                 <Link
                   to="/products"
@@ -88,56 +60,10 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Products */}
-          <div>
-            <h4 className="mb-6 text-foreground font-heading">Our Products</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/products"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Single Origin
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Bulk Orders
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Specialty Beans
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/products"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Organic Coffee
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h4 className="mb-6 text-foreground font-heading">Get In Touch</h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                <span className="text-muted-foreground text-sm">
-                  Mr. Bean Coffee Ltd. 275 New North Road, Islington, Suite 5236
-                  London N1 7AA, U.K.
-                </span>
-              </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <a
@@ -157,6 +83,29 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+
+          <div>
+            <div className="flex space-x-4">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

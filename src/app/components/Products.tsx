@@ -10,7 +10,7 @@ export function Products() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl mb-4 text-foreground font-heading">
-            Our Premium Specialty Coffee
+            Our Premium Specialty Coffees
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Discover our carefully curated collection of Ethiopian green coffee
@@ -19,7 +19,7 @@ export function Products() {
         </div>
 
         {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {/* <div className="flex flex-wrap justify-center gap-3 mb-12">
           <button className="px-6 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors">
             All Beans
           </button>
@@ -32,7 +32,7 @@ export function Products() {
           <button className="px-6 py-2 bg-white text-foreground rounded-full hover:bg-primary hover:text-primary-foreground transition-colors">
             Specialty Beans
           </button>
-        </div>
+        </div> */}
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

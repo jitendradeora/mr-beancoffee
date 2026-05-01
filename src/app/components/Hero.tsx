@@ -25,7 +25,7 @@ export function Hero() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-3xl md:text-4xl lg:text-5xl mb-5 text-white font-heading leading-tight">
-                Premium Ethiopian Green Coffee Beans
+                Ethiopian Specialty Green Coffee Beans
               </h1>
             </motion.div>
 
@@ -35,7 +35,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl mb-8 text-white/90 leading-relaxed"
             >
-              Sustainably sourced from the rich highlands of Hambella, Guji – delivering exceptional quality and unique flavor profiles.
+              Sustainably sourced, delivering exceptional quality and unique flavor profiles.
             </motion.p>
 
             <motion.div
@@ -61,21 +61,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-3 bg-white/50 rounded-full mt-2"
-          />
-        </div>
-      </motion.div>
+      
     </section>
   );
 }
