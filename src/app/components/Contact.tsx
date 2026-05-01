@@ -1,3 +1,4 @@
+import React from "react";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 
 export function Contact() {
@@ -13,7 +14,7 @@ export function Contact() {
         <div className="grid w-full">
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-xl shadow-lg mx-auto w-full max-w-[600px]">
-            <form className="space-y-6">
+            <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label
                   htmlFor="name"
@@ -68,19 +69,21 @@ export function Contact() {
                 </label>
                 <textarea
                   id="message"
-                  rows={4}
+                  rows={2}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
                   placeholder=""
                 ></textarea>
               </div>
 
-              <button
-                type="submit"
-                className="w-full bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group"
-              >
-                <span>Contact Us</span>
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <div className="md:col-span-2">
+                <button
+                  type="submit"
+                  className="w-full bg-primary text-primary-foreground px-8 py-4 rounded-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2 group"
+                >
+                  <span>Contact Us</span>
+                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
             </form>
           </div>
         </div>

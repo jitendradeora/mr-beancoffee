@@ -20,7 +20,7 @@ export function Home() {
         <Hero />
         <Features />
         <About />
-        <Commitment />
+
         {/* <ProductOverview /> */}
         <Products />
         <CoffeeRegions />
@@ -28,6 +28,7 @@ export function Home() {
         {/* <Testimonials /> */}
         <CTA />
         <Contact />
+        <Commitment />
       </main>
       <Footer />
     </div>

@@ -64,27 +64,6 @@ export function About() {
             />
           </div>
         </div>
-
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <div
-                key={index}
-                className="text-center p-6 rounded-xl bg-background hover:shadow-lg transition-shadow"
-              >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-8 h-8 text-primary" />
-                </div>
-                <h4 className="mb-2 text-foreground">{feature.title}</h4>
-                {/* <p className="text-sm text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p> */}
-              </div>
-            );
-          })}
-        </div>
       </div>
     </section>
   );
