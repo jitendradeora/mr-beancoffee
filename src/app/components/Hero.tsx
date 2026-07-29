@@ -44,18 +44,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-3"
             >
-              <Link
-                to="/products"
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all text-center"
-              >
-                Explore Beans
-              </Link>
-              <a
-                href="https://mr-bean.coffee/contact/"
-                className="px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-foreground transition-all text-center"
-              >
-                Contact Us
-              </a>
+              
             </motion.div>
           </div>
         </div>
