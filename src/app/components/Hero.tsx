@@ -51,7 +51,7 @@ export function Hero() {
                 Explore Beans
               </Link>
               <a
-                href="#contact"
+                href="https://mr-bean.coffee/contact/"
                 className="px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-foreground transition-all text-center"
               >
                 Contact Us
