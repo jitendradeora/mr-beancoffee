@@ -19,15 +19,15 @@ export function Home() {
       <main>
         <Hero />
         <Features />
-        <About />
+        {/* <About /> */}
 
         {/* <ProductOverview /> */}
         <Products />
         <CoffeeRegions />
-        <FeaturedVarieties />
+        {/* <FeaturedVarieties /> */}
         {/* <Testimonials /> */}
         
-        <Commitment />
+        {/* <Commitment /> */}
       </main>
       <Footer />
     </div>

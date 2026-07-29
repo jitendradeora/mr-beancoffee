@@ -66,11 +66,11 @@ const regions: Region[] = [
 
 export function CoffeeRegions() {
   return (
-    <section id="coffee" className="py-20 bg-background">
+    <section id="coffee" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl mb-4 text-foreground font-heading">
-            Our Coffee Origins
+           Our Premium Specialty Coffees
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             We source our premium specialty green coffee beans from multiple
@@ -82,7 +82,7 @@ export function CoffeeRegions() {
           {regions.map((region, index) => (
             <div
               key={index}
-              className="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transition-all group cursor-pointer"
+              className="bg-background p-4 rounded-lg shadow-md hover:shadow-xl transition-all group cursor-pointer"
             >
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-gray-100">

@@ -84,14 +84,14 @@ export function Header() {
             </Link>
             {isHome ? (
               <a
-                href="#about"
+                href="https://mr-bean.coffee/about/"
                 className="text-foreground hover:text-primary transition-colors"
               >
                 About Us
               </a>
             ) : (
               <Link
-                to="/#about"
+                to="https://mr-bean.coffee/about/"
                 className="text-foreground hover:text-primary transition-colors"
               >
                 About Us
@@ -326,7 +326,7 @@ export function Header() {
                 </Link>
                 {isHome ? (
                   <a
-                    href="#about"
+                    href="https://mr-bean.coffee/about/"
                     className="text-foreground hover:text-primary transition-colors text-lg"
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -334,7 +334,7 @@ export function Header() {
                   </a>
                 ) : (
                   <Link
-                    to="/#about"
+                    to="https://mr-bean.coffee/about/"
                     className="text-foreground hover:text-primary transition-colors text-lg"
                     onClick={() => setMobileMenuOpen(false)}
                   >
