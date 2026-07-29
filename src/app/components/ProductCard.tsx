@@ -55,14 +55,14 @@ export function ProductCard({
               B2C & B2B{" "}
             </span>
           </div>
-          {!isContactPricing && (
+          {/* {!isContactPricing && (
             <button
               onClick={handleAddToCart}
               className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-all flex items-center gap-2 group-hover:gap-3 text-sm"
             >
               <span>Select Sizes</span>
             </button>
-          )}
+          )} */}
         </div>
       </div>
     </>

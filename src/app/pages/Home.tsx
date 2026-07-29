@@ -26,8 +26,7 @@ export function Home() {
         <CoffeeRegions />
         <FeaturedVarieties />
         {/* <Testimonials /> */}
-        <CTA />
-        <Contact />
+        
         <Commitment />
       </main>
       <Footer />

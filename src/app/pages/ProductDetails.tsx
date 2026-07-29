@@ -20,7 +20,6 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-  ChevronDown,
   X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
@@ -193,25 +192,39 @@ export function ProductDetails() {
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm mb-2">
                   {product.category}
                 </span>
-                <h1 className="text-3xl md:text-4xl mb-2 text-foreground font-heading">
+                <h1 className="text-2xl md:text-3xl mb-2 text-foreground font-heading">
                   {product.name}
                 </h1>
               </div>
             </div>
 
+            
+{/* 
             <div className="flex items-baseline gap-3 mb-6">
               <span className="text-4xl text-primary font-heading">
                 ${product.price}
               </span>
               <span className="text-muted-foreground">/kg</span>
-            </div>
+            </div> */}
 
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            
+
+            <p className="text-muted-foreground text-lg leading-relaxed mb-5">
               {product.description}
             </p>
 
+
+            <div className="pt-0 mb-5">
+          <h2 className="text-2xl md:text-2xl mb-6 font-heading">
+            About This Coffee
+          </h2>
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            {product.details}
+          </p>
+        </div>
+
             {/* Stock Status */}
-            <div className="flex items-center gap-2 mb-8">
+            {/* <div className="flex items-center gap-2 mb-8">
               {product.inStock ? (
                 <>
                   <CheckCircle className="w-5 h-5 text-green-600" />
@@ -223,31 +236,33 @@ export function ProductDetails() {
                   <span className="text-red-600">Out of Stock</span>
                 </>
               )}
-            </div>
+            </div> */}
 
             {/* Product Variations */}
             <div className="mb-8 space-y-6">
               <div>
                 <label className="block text-sm mb-3">Bag Size</label>
-                <div className="relative">
-                  <select
-                    value={bagSize}
-                    onChange={(e) => setBagSize(e.target.value)}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white appearance-none"
-                  >
-                    <option value="250GM">250GM</option>
-                    <option value="500GM">500GM</option>
-                    <option value="1KG">1KG</option>
-                    <option value="5KG">5KG</option>
-                    <option value="10KG">10KG</option>
-                    <option value="25KG">25KG</option>
-                    <option value="60KG">60KG</option>
-                  </select>
-                  <ChevronDown className="w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                <div className="flex flex-wrap gap-2">
+                  {["250GM", "500GM", "1KG", "5KG", "10KG", "25KG", "60KG"].map(
+                    (size) => (
+                      <button
+                        key={size}
+                        type="button"
+                        onClick={() => setBagSize(size)}
+                        className={`px-4 py-2 rounded-full text-sm border transition-colors ${
+                          bagSize === size
+                            ? "bg-primary text-primary-foreground border-primary"
+                            : "bg-white text-foreground border-gray-200 hover:border-primary hover:text-primary"
+                        }`}
+                      >
+                        {size}
+                      </button>
+                    ),
+                  )}
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <label className="block text-sm mb-3">Number of Bags</label>
                 <div className="flex items-center gap-4">
                   <div className="flex items-center border-2 border-gray-200 rounded-lg bg-white">
@@ -281,11 +296,15 @@ export function ProductDetails() {
                     Min. order: {product.minOrder}
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
+            
+
+
+
             {/* Add to Cart Button */}
-            <div className="flex gap-4 mb-12">
+            {/* <div className="flex gap-4 mb-12">
               <button
                 disabled={!product.inStock}
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -301,21 +320,14 @@ export function ProductDetails() {
               >
                 Request further information
               </button>
-            </div>
+            </div> */}
 
             {/* Cup Profile */}
           </div>
         </div>
 
         {/* Full Description */}
-        <div className="pt-8">
-          <h2 className="text-2xl md:text-3xl mb-6 font-heading">
-            About This Coffee
-          </h2>
-          <p className="text-muted-foreground leading-relaxed text-lg">
-            {product.details}
-          </p>
-        </div>
+        
 
         {/* Product Specifications */}
         <div className="border-t border-gray-200 pt-8 mt-8">
@@ -360,19 +372,21 @@ export function ProductDetails() {
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-200 pt-8 mt-8 mb-8">
-          <h3 className="text-xl mb-4 font-heading">Cup Profile</h3>
-          <div className="flex flex-wrap gap-2">
-            {product.cupProfile.map((note, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm"
-              >
-                {note}
-              </span>
-            ))}
+
+          <div className="border-t border-gray-200 pt-8 mt-8 mb-8">
+            <h3 className="text-xl mb-4 font-heading">Cup Profile</h3>
+            <div className="flex flex-wrap gap-2">
+              {product.cupProfile.map((note, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm"
+                >
+                  {note}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        
       </div>
 
       <AnimatePresence>

@@ -5,6 +5,7 @@ import {
   Facebook,
   Instagram,
   Linkedin,
+  Youtube,
   ChevronUp,
 } from "lucide-react";
 import { Link } from "react-router";
@@ -88,19 +89,25 @@ export function Footer() {
           <div>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/shish.roasters"
                 className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/shish.roasters/"
                 className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@Mr-Bean.Coffee"
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/mr-bean-coffee-roasters"
                 className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-primary transition-colors bg-primary text-white"
               >
                 <Linkedin className="w-5 h-5" />
@@ -128,7 +135,7 @@ export function Footer() {
                   <ChevronUp className="w-4 h-4" aria-hidden />
                   Move to top
                 </button>
-                <a
+                {/* <a
                   href="#"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
@@ -139,7 +146,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Terms
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

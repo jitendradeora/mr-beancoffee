@@ -8,6 +8,8 @@ import {
   Twitter,
   Instagram,
   Linkedin,
+  Youtube,
+  
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
@@ -127,14 +129,14 @@ export function Header() {
             )}
             {isHome ? (
               <a
-                href="#contact"
+                href="https://mr-bean.coffee/contact/"
                 className="text-foreground hover:text-primary transition-colors"
               >
                 Contact
               </a>
             ) : (
               <Link
-                to="/#contact"
+                to="https://mr-bean.coffee/contact/"
                 className="text-foreground hover:text-primary transition-colors"
               >
                 Contact
@@ -144,15 +146,15 @@ export function Header() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-6 relative">
-            <button
+            {/* <button
               onClick={() => setSearchOpen(!searchOpen)}
               className="text-foreground hover:text-primary transition-colors"
             >
               <Search className="w-5 h-5" />
-            </button>
+            </button> */}
 
             {/* Search Dropdown */}
-            <AnimatePresence>
+            {/* <AnimatePresence>
               {searchOpen && (
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
@@ -171,16 +173,16 @@ export function Header() {
                   </div>
                 </motion.div>
               )}
-            </AnimatePresence>
+            </AnimatePresence> */}
 
-            <Link
+            {/* <Link
               to="/login"
               className="text-foreground hover:text-primary transition-colors"
             >
               <User className="w-5 h-5" />
-            </Link>
+            </Link> */}
 
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onClick={() => setCartOpen(!cartOpen)}
                 className="relative text-foreground hover:text-primary transition-colors"
@@ -193,7 +195,7 @@ export function Header() {
                 )}
               </button>
 
-              {/* Cart Dropdown */}
+           
               <AnimatePresence>
                 {cartOpen && (
                   <motion.div
@@ -258,14 +260,14 @@ export function Header() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
-
+            </div> */}
+{/* 
             <Link
               to="/products"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
             >
               Shop Now
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -375,7 +377,7 @@ export function Header() {
                 )}
                 {isHome ? (
                   <a
-                    href="#contact"
+                    href="https://mr-bean.coffee/contact/"
                     className="text-foreground hover:text-primary transition-colors text-lg"
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -383,7 +385,7 @@ export function Header() {
                   </a>
                 ) : (
                   <Link
-                    to="/#contact"
+                    to="https://mr-bean.coffee/contact/"
                     className="text-foreground hover:text-primary transition-colors text-lg"
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -391,7 +393,7 @@ export function Header() {
                   </Link>
                 )}
 
-                <div className="flex items-center space-x-6 pt-6 border-t border-border">
+                {/* <div className="flex items-center space-x-6 pt-6 border-t border-border">
                   <button className="text-foreground hover:text-primary transition-colors">
                     <Search className="w-6 h-6" />
                   </button>
@@ -409,15 +411,15 @@ export function Header() {
                       </span>
                     )}
                   </button>
-                </div>
+                </div> */}
 
-                <Link
+                {/* <Link
                   to="/products"
                   className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors text-center mt-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Shop Now
-                </Link>
+                </Link> */}
               </nav>
 
               {/* Social Media Links */}
@@ -425,7 +427,7 @@ export function Header() {
                 <p className="text-sm text-muted-foreground mb-4">Follow Us</p>
                 <div className="flex items-center gap-4">
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/shish.roasters"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -433,15 +435,7 @@ export function Header() {
                     <Facebook className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/shish.roasters/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -449,7 +443,15 @@ export function Header() {
                     <Instagram className="w-5 h-5" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.youtube.com/@Mr-Bean.Coffee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <Youtube className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/mr-bean-coffee-roasters"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
